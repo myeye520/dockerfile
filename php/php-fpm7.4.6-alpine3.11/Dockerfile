@@ -222,7 +222,8 @@ RUN apk update && apk add --no-cache \
 	&& docker-php-ext-install opcache \
 	&& pecl install swoole \
 	&& docker-php-ext-enable swoole \
-	&& docker-php-ext-install pdo_mysql
+	&& docker-php-ext-install pdo_mysql \
+	&& docker-php-ext-install pcntl
 
 # 安装zmq扩展
 RUN cd /usr/src \ 
